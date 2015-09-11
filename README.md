@@ -8,7 +8,7 @@
 This program takes location-based social network (LBSN) data (point data), and performs two operations. One is DBSCAN which detects clusters based on point density; the other is concave hull which constructs polygons from point clusters. This program can be used to extract hotspots from location-based social media data, and can also reduce the dominating effects from active users. This program can achieve the following effect:
 ![DBSCAN and Concave Hull](http://www.geog.ucsb.edu/~hu/clustering.png)
 
-A research project urban Areas of Interest (AOI) developed based on this program can be accessed at: http://stko-exp.geog.ucsb.edu/urbanAOIs/
+A research project **Urban Areas of Interest (AOI)** has been developed based on this program, and can be accessed at: http://stko-exp.geog.ucsb.edu/urbanAOIs/
 
 
 ### Repository organization
