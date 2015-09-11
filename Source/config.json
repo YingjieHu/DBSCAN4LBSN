@@ -1,0 +1,39 @@
+{
+     # Path parameters ----------------------
+     dataPath:"Input/Sample_Input.csv",     # path of the input location data; input files should be in csv formats
+     tempPath: "Temp",  # path to store the temporary files
+     # Path parameters finish -------------
+     
+     
+     # Attribute parameters -------------------
+     recordIDIndex:0,    # the column number of the id in the input file (starting from 0)
+     userIDIndex:1,        # the column number of the user ids; if there is no user id, then put -1
+     lngIndex:2,               # the column number of the longitude (or x) values 
+     latIndex:3,                # the column number of the latitude (or y) values 
+     # Attribute parameters finish ----------
+     
+     
+     # pre-processing parameters ------------------
+     removeDuplicates:true,       # whether the duplicated data from the same user should be removed before clustering; should be true or false
+     # pre-processing parameters finish ---------
+     
+     
+     # DBSCAN paramters ------------------
+     eps:28800,     # search radius for DBSCAN; this value should be consistent with the coordinate unit, e.g., if using lat, long, you may use 0.01
+     minPts: 0.01,    # minimum number of points within the search radius; can be either an absolute number (such as 20) or a percentage value (e.g., 0.05)
+     minPtsPercentage: true,    # a flag parameter indicating whether minPts is a percentage or an absolute value
+     # DBSCAN paramters finish ----------
+     
+     
+     # concave hull parameter ------------------
+     lambda: 43,             # a parameter for the chi-shape algorithm, ranging from 1 to 100
+     # concave hull parameter finishes -------
+     
+     
+     # projection parameter --------------------
+     # this parameter specifies the spatial reference of the output. If the reference is WGS84, then leave it as empty; To get the JSON format of a spatial reference, save a Esri shapefile into EsriJSON. Then, use a text editing tool to open the JSON file, and find the attribute of "spatialReference" 
+     spatialReference:"{\"wkt\":\"PROJCS[\\\"NAD83_NSRS2007_California_Albers\\\",GEOGCS[\\\"GCS_NAD83(NSRS2007)\\\",DATUM[\\\"D_NAD83_National_Spatial_Reference_System_2007\\\",SPHEROID[\\\"GRS_1980\\\",6378137.0,298.257222101]],PRIMEM[\\\"Greenwich\\\",0.0],UNIT[\\\"Degree\\\",0.0174532925199433]],PROJECTION[\\\"Albers\\\"],PARAMETER[\\\"false_easting\\\",0.0],PARAMETER[\\\"false_northing\\\",-4000000.0],PARAMETER[\\\"central_meridian\\\",-120.0],PARAMETER[\\\"standard_parallel_1\\\",34.0],PARAMETER[\\\"standard_parallel_2\\\",40.5],PARAMETER[\\\"latitude_of_origin\\\",0.0],UNIT[\\\"Meter\\\",1.0]]\"}"  
+     # for WGS84 use: spatialReference:""
+     # projection parameter finished --------   
+    
+}
