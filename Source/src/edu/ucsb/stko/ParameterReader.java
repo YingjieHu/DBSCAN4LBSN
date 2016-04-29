@@ -58,11 +58,11 @@ class ParameterReader
 								return null;
 						}
 						
-						if(parameterObject.getBoolean("removeDuplicates") && (parameterObject.getInt("userIDIndex") == -1))
+					/*	if(parameterObject.getBoolean("removeDuplicates") && (parameterObject.getInt("userIDIndex") == -1))
 						{
 								System.out.println("You have indicated that you want to remove the duplicates. However, you didn't provide the userID index; please check the configuration file.");
 								return null;
-						}
+						}*/
 						
 						if(parameterObject.getBoolean("minPtsPercentage") && (parameterObject.getDouble("minPts")>1))
 						{

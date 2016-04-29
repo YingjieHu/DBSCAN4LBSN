@@ -16,11 +16,6 @@
      # Attribute parameters finish ----------
      
      
-     # pre-processing parameters ------------------
-     removeDuplicates:false,       # whether the duplicated data from the same user should be removed before clustering; should be true or false
-     # pre-processing parameters finish ---------
-     
-     
      # DBSCAN paramters ------------------
      eps:28800,     # search radius for DBSCAN; this value should be consistent with the coordinate unit, e.g., if using lat, long, you may use 0.01
      minPts: 0.05,    # minimum number of points within the search radius; can be either an absolute number (such as 20) or a percentage value (e.g., 0.05)
@@ -29,7 +24,7 @@
      
      
      # concave hull parameter ------------------
-     lambda: 43,             # a parameter for the chi-shape algorithm, ranging from 1 to 100
+     lambda: 50,             # a parameter for the chi-shape algorithm, ranging from 1 to 100
      # concave hull parameter finishes -------
      
      

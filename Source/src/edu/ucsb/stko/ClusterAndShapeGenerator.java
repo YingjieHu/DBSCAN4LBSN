@@ -68,17 +68,17 @@ class ClusterAndShapeGenerator
 						int minPts = 0;
 						if(!isMinPtsPercent)
 						{
-								minPts = (int)parameterObject.getDouble("minPts");
+								minPts = (int)Math.ceil(parameterObject.getDouble("minPts"));
 						}
 						else
 						{
 							if(userIDIndex == -1)
 							{
-									minPts = (int)(parameterObject.getDouble("minPts") * recordCount);
+									minPts = (int)Math.ceil((parameterObject.getDouble("minPts") * recordCount));
 							}
 							else
 							{
-									minPts = (int)(parameterObject.getDouble("minPts") * userCount);
+									minPts = (int)Math.ceil((parameterObject.getDouble("minPts") * userCount));
 							}
 						}
 						
@@ -202,7 +202,7 @@ class ClusterAndShapeGenerator
     				 long totalRecordCount = dataSummaryObject.getLong("recordCount");
     				 double recordPercentageValue = (recordCountInAOI * 1.0)/ (totalRecordCount * 1.0);
     				 
-    				 double minPts = parameterObject.getDouble("minPts");	 
+    				// double minPts = parameterObject.getDouble("minPts");	 
     				 int userIDIndex = parameterObject.getInt("userIDIndex");
     				 
     				 long userCountInAOI = 0;    				 
@@ -216,7 +216,7 @@ class ClusterAndShapeGenerator
     				 }
 
     				 
-    				 if(parameterObject.getBoolean("minPtsPercentage"))
+    				 /*if(parameterObject.getBoolean("minPtsPercentage"))
     				 {
     						 if(userIDIndex != -1)
     						 {
@@ -237,7 +237,7 @@ class ClusterAndShapeGenerator
     						 {
 								     if(recordCountInAOI < minPts) return null;
 						     }
-				     }			
+				     }		*/	
     				 
     				 JSONObject thisFeatureObject = new JSONObject();
     				 if(userIDIndex != -1)

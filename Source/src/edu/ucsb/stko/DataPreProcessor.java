@@ -45,14 +45,14 @@ class DataPreProcessor
 						int lngIndex = parameterObject.getInt("lngIndex");               
 						int latIndex =  parameterObject.getInt("latIndex");   
 						
-						boolean removeDuplicates = parameterObject.getBoolean("removeDuplicates");
+						/*boolean removeDuplicates = parameterObject.getBoolean("removeDuplicates");
 						if(removeDuplicates && (userIDIndex == -1))
 						{
 								System.out.println("You have indicated to remove duplicated records, but didn't provide the column number of user id; please check the configuration file.");
 								inputCSVReader.close();
 								outputFileWriter.close();
 								return null;
-						}
+						}*/
 						
 						Hashtable<String, Vector<Point2D>> existingDataHashtable = new Hashtable<>(1000);
 						long totalProcessedDataRecord = 0;
@@ -78,7 +78,7 @@ class DataPreProcessor
     								continue;
     							}
 							
-    							if(removeDuplicates)
+    							if(userIDIndex != -1)
     							{
     									boolean isDuplicated = false;
     	    							if(existingDataHashtable.containsKey(ownerString))
@@ -116,15 +116,15 @@ class DataPreProcessor
     							}
     							else
     							{
-										if(userIDIndex != -1)
+										/*if(userIDIndex != -1)
 										{
 												existingDataHashtable.put(ownerString, new Vector<Point2D>(1));
 												outputFileWriter.append(recordId+","+ownerString+","+latString+","+lngString+newLineSymbol);
 										}
 										else
-										{
-												outputFileWriter.append(recordId+","+latString+","+lngString+newLineSymbol);
-										}
+										{*/
+										outputFileWriter.append(recordId+","+latString+","+lngString+newLineSymbol);
+										//}
 										totalProcessedDataRecord++;
 								}
     							
