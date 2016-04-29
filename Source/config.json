@@ -7,14 +7,17 @@
      
      # Attribute parameters -------------------
      recordIDIndex:0,    # the column number of the id in the input file (starting from 0)
-     userIDIndex:1,        # the column number of the user ids; if there is no user id, then put -1
+     
+     userIDIndex:1,        # the column number of the user ids; if there is no user id (or user id should not be used for clustering), then put -1; 
+                                           # IMPORTANT: put -1 for userIDIndex (even though you may have user ids in your data), if you want the cluster to be formed based on the number of points; other values will make the clusters and polygons generated based on the number of users; this is a valuable feature for clustering social media data, but may not be what you want for your research;   
+     
      lngIndex:2,               # the column number of the longitude (or x) values 
      latIndex:3,                # the column number of the latitude (or y) values 
      # Attribute parameters finish ----------
      
      
      # pre-processing parameters ------------------
-     removeDuplicates:true,       # whether the duplicated data from the same user should be removed before clustering; should be true or false
+     removeDuplicates:false,       # whether the duplicated data from the same user should be removed before clustering; should be true or false
      # pre-processing parameters finish ---------
      
      

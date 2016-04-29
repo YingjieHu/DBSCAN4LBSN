@@ -197,15 +197,24 @@ class ClusterAndShapeGenerator
     				 
     				 Hashtable<String, Long> recordAndUserTable = countRecordAndUserInAOI(concaveHullResultGeometry, parameterObject);
     				 
-    				 long userCountInAOI = recordAndUserTable.get("userCount");
-    				 long recordCountInAOI = recordAndUserTable.get("recordCount");
-    				 long totalUserCount = dataSummaryObject.getLong("userCount");
-    				 long totalRecordCount = dataSummaryObject.getLong("recordCount");
     				 
-    				 double userPercentageValue = (userCountInAOI *1.0)/(totalUserCount * 1.0);
+    				 long recordCountInAOI = recordAndUserTable.get("recordCount");
+    				 long totalRecordCount = dataSummaryObject.getLong("recordCount");
     				 double recordPercentageValue = (recordCountInAOI * 1.0)/ (totalRecordCount * 1.0);
-    				 double minPts = parameterObject.getDouble("minPts");
+    				 
+    				 double minPts = parameterObject.getDouble("minPts");	 
     				 int userIDIndex = parameterObject.getInt("userIDIndex");
+    				 
+    				 long userCountInAOI = 0;    				 
+    				 long totalUserCount = 0;
+    				 double userPercentageValue = 0;
+    				 if(userIDIndex != -1)
+    				 {
+    						 userCountInAOI = recordAndUserTable.get("userCount");
+    						 totalUserCount = dataSummaryObject.getLong("userCount");
+    						 userPercentageValue = (userCountInAOI *1.0)/(totalUserCount * 1.0);
+    				 }
+
     				 
     				 if(parameterObject.getBoolean("minPtsPercentage"))
     				 {
