@@ -34,7 +34,7 @@ One cool feature of this software package is that it allows you to cluster based
 ### Citation
 If you use this program in your research, we would really appreciate if you could cite our following paper:
 
-Y. Hu, S. Gao, K. Janowicz, B. Yu, W. Li, S. Prasad (2015): Extracting and understanding urban areas of interest using geotagged photos, Computers, Environment and Urban Systems, 54, 240-254 doi:10.1016/j.compenvurbsys.2015.09.001 
+Y. Hu, S. Gao, K. Janowicz, B. Yu, W. Li, S. Prasad (2015): Extracting and understanding urban areas of interest using geotagged photos, Computers, Environment and Urban Systems, 54, 240-254. doi:10.1016/j.compenvurbsys.2015.09.001 
 
 Thanks!
 
