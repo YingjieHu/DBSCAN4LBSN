@@ -4,6 +4,7 @@
 * Email: yjhu.geo@gmail.com
 
 
+
 ### Overall description 
 This program takes location-based social network (LBSN) data (point data), and performs two operations. One is DBSCAN which detects clusters based on point density; the other is concave hull which constructs polygons from point clusters. This program can be used to extract hotspots from location-based social media data, and can also reduce the dominating effects from active users. This program can achieve the following effect:
 ![DBSCAN and Concave Hull](http://www.geog.ucsb.edu/~hu/clustering.png)
@@ -33,7 +34,7 @@ One cool feature of this software package is that it allows you to cluster based
 ### Citation
 If you use this program in your research, we would really appreciate if you could cite our following paper:
 
-Y. Hu, S. Gao, K. Janowicz, B. Yu, W. Li, S. Prasad (2015): Extracting and understanding urban areas of interest using geotagged photos, Computers, Environment and Urban Systems, doi:10.1016/j.compenvurbsys.2015.09.001 
+Y. Hu, S. Gao, K. Janowicz, B. Yu, W. Li, S. Prasad (2015): Extracting and understanding urban areas of interest using geotagged photos, Computers, Environment and Urban Systems, 54, 240-254 doi:10.1016/j.compenvurbsys.2015.09.001 
 
 Thanks!
 
